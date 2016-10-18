@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { AddFormComponent } from './add-form/add-form.component';
+import { TodoItemsComponent } from './todo-items/todo-items.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    AddFormComponent,
+    TodoItemsComponent
   ],
   imports: [
     BrowserModule,
