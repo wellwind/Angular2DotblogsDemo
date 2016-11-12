@@ -18,8 +18,4 @@ export class AddFormComponent implements OnInit {
   addTodo($event: MouseEvent) {
     console.log('輸入的文字為 : ' + this.todoText);
   }
-
-  changeTodoText($event: KeyboardEvent) {
-    this.todoText = ($event.target as HTMLInputElement).value;
-  }
 }
