@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  title = '歡迎來到Todo App';
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  getDate() {
+    return (new Date());
+  }
 }

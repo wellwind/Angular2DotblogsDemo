@@ -1,1 +1,2 @@
-<input type="text" placeholder="請輸入代辦事項"> <button>增加</button>
+<input type="text" [(ngModel)]="todoText" [placeholder]="placeholderText" />
+<button (click)="addTodo($event)">增加</button>
