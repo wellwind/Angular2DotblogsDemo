@@ -14,8 +14,8 @@ export class AddFormComponent implements OnInit {
   ngOnInit() {
   }
 
-  addTodo() {
-    console.log('按鈕被按下了')
+  addTodo($event) {
+    console.log('按鈕被按下了', $event);
   }
 
 }
