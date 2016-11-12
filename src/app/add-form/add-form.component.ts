@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AddFormComponent implements OnInit {
 
+  placeholderText = '請輸入代辦事項';
+
   constructor() { }
 
   ngOnInit() {
