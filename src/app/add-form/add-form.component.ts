@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class AddFormComponent implements OnInit {
 
   placeholderText = '請輸入代辦事項';
+  todoText = '';
 
   constructor() { }
 
@@ -15,7 +16,10 @@ export class AddFormComponent implements OnInit {
   }
 
   addTodo($event: MouseEvent) {
-    console.log('按鈕被按下了', $event);
+    console.log('輸入的文字為 : ' + this.todoText);
   }
 
+  changeTodoText($event: KeyboardEvent) {
+    this.todoText = ($event.target as HTMLInputElement).value;
+  }
 }

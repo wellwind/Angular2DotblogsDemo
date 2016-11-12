@@ -1,1 +1,2 @@
-<input type="text" [placeholder]="placeholderText"> <button (click)="addTodo($event)">增加</button>
+<input type="text" [value]="todoText" (input)="changeTodoText($event)" [placeholder]="placeholderText" />
+<button (click)="addTodo($event)">增加</button>
