@@ -24,7 +24,7 @@ export class AppComponent {
 
   addTodo(text) {
     this.todoItems.push({
-      id: this.todoItems.length + 1,
+      id: (new Date()).getTime(),
       value: text,
       done: false
     });
