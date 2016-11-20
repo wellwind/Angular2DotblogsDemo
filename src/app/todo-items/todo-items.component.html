@@ -1,7 +1,7 @@
 <ul>
   <li *ngFor="let item of items">
     <label htmlFor="chk_{{item.id}}">
-      <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done"> {{ item.value }}
+      <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="itemClick(item)"> {{ item.value }}
     </label>
     |
     <a href="#">刪除</a>

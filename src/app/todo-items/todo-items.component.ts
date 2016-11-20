@@ -15,4 +15,7 @@ export class TodoItemsComponent implements OnInit {
   ngOnInit() {
   }
 
+  itemClick(item: TodoItem) {
+    item.done = !item.done;
+  }
 }
