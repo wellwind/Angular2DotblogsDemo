@@ -22,4 +22,12 @@ export class AppComponent {
     done: false
   }];
 
+  addTodo(text) {
+    this.todoItems.push({
+      id: this.todoItems.length + 1,
+      value: text,
+      done: false
+    });
+  }
+
 }
