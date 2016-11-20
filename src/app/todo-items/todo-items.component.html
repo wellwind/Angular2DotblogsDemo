@@ -4,7 +4,7 @@
       <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="itemClick(item)"> {{ item.value }}
     </label>
     |
-    <a href="#">刪除</a>
+    <a href="#" (click)="delete(item)">刪除</a>
     <span *ngIf="item.done">(已完成)</span>
     </li>
 </ul>

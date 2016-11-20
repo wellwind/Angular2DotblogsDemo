@@ -30,4 +30,10 @@ export class AppComponent {
     });
   }
 
+  deleteItem(item: TodoItem) {
+    console.log(item);
+    this.todoItems = this.todoItems.filter(todoItem => todoItem.id !== item.id);
+    console.log(this.todoItems);
+  }
+
 }
