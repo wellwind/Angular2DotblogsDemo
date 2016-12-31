@@ -23,4 +23,9 @@ export class TodoItemsComponent implements OnInit {
     delete(item: TodoItem) {
         this.deleteItem.emit(item);
     }
+
+    getBlueClass() {
+        // 這裡可以用程式動態決定要回傳字串、陣列或物件
+        return 'blue';
+    }
 }
