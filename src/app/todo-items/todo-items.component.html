@@ -2,12 +2,13 @@
   <strong>TodoItemsComponent中測試strong標籤</strong>
 </div>
 <div>
-  <span class="blue">TodoItemsComponent中測試blue class</span>
+  <span [ngClass]="getBlueClass()">TodoItemsComponent中測試blue class</span>
 </div>
 <ul>
   <li *ngFor="let item of items">
     <label htmlFor="chk_{{item.id}}">
-      <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="itemClick(item)"> {{ item.value }}
+      <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="itemClick(item)"> 
+      <span [ngClass]="{'done' : item.done}">{{ item.value }}</span>
     </label>
     |
     <a href="#" (click)="delete(item)">刪除</a>
