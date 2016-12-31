@@ -5,10 +5,12 @@
   <span [ngClass]="getBlueClass()">TodoItemsComponent中測試blue class</span>
 </div>
 <ul>
-  <li *ngFor="let item of items">
+  <li *ngFor="let item of items;let recordIndex = index;let firstRecord = first;let lastRecotd = last; let evenRecord = even; let oddRecord = odd">
     <label htmlFor="chk_{{item.id}}">
       <input id="chk_{{item.id}}" type="checkbox" [checked]="item.done" (click)="itemClick(item)"> 
-      <span [ngClass]="{'done' : item.done}">{{ item.value }}</span>
+      <span [ngClass]="{'done' : item.done, 'text-danger': firstRecord, 'text-warning': lastRecotd, 'bg-info': evenRecord, 'bg-success': oddRecord}">
+        {{ recordIndex }} . {{ item.value }}
+      </span>
     </label>
     |
     <a href="#" (click)="delete(item)">刪除</a>
