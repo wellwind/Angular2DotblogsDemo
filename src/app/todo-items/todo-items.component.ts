@@ -1,31 +1,32 @@
+import { TodoListService } from './../todo-list.service';
 import { TodoItem } from './../shared/todo-item';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
-    selector: 'app-todo-items',
-    templateUrl: './todo-items.component.html',
-    styleUrls: ['./todo-items.component.css']
+  selector: 'app-todo-items',
+  templateUrl: './todo-items.component.html',
+  styleUrls: ['./todo-items.component.css']
 })
 export class TodoItemsComponent implements OnInit {
+  constructor(private todoListService: TodoListService) { }
 
-    @Input() items: TodoItem[];
+  ngOnInit() {
+  }
 
-    @Output() deleteItem = new EventEmitter();
-    constructor() { }
+  getTodoList() {
+    return this.todoListService.getTodoList();
+  }
 
-    ngOnInit() {
-    }
+  itemClick(item: TodoItem) {
+    this.todoListService.toogleItemStatus(item);
+  }
 
-    itemClick(item: TodoItem) {
-        item.done = !item.done;
-    }
+  delete(item: TodoItem) {
+    this.todoListService.deleteItem(item);
+  }
 
-    delete(item: TodoItem) {
-        this.deleteItem.emit(item);
-    }
-
-    getBlueClass() {
-        // 這裡可以用程式動態決定要回傳字串、陣列或物件
-        return 'blue';
-    }
+  getBlueClass() {
+    // 這裡可以用程式動態決定要回傳字串、陣列或物件
+    return 'blue';
+  }
 }
