@@ -1,6 +1,5 @@
 import { TodoListService } from './todo-list.service';
 import { Component } from '@angular/core';
-import { TodoItem } from './shared/todo-item';
 
 @Component({
   selector: 'app-root',
@@ -12,17 +11,4 @@ export class AppComponent {
 
   constructor(private todoListService: TodoListService) {
   }
-
-  getTodoList() {
-    return this.todoListService.getTodoList;
-  }
-
-  addTodo(text) {
-
-  }
-
-  deleteItem(item: TodoItem) {
-
-  }
-
 }
