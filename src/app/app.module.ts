@@ -1,3 +1,4 @@
+import { TodoListService } from './todo-list.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -20,7 +21,7 @@ import { TodoItemsComponent } from './todo-items/todo-items.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [TodoListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
