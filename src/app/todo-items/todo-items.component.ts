@@ -1,3 +1,4 @@
+import { TodoListService } from './../todo-list.service';
 import { TodoItem } from './../shared/todo-item';
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
@@ -7,6 +8,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
     styleUrls: ['./todo-items.component.css']
 })
 export class TodoItemsComponent implements OnInit {
+  constructor(private todoListService: TodoListService) { }
 
     @Input() items: TodoItem[];
 
