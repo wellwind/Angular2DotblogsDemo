@@ -1,6 +1,6 @@
 import { TodoListService } from './../todo-list.service';
 import { TodoItem } from './../shared/todo-item';
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-todo-items',
@@ -11,6 +11,7 @@ export class TodoItemsComponent implements OnInit {
   constructor(private todoListService: TodoListService) { }
 
   ngOnInit() {
+    this.todoListService.loadTodoList();
   }
 
   getTodoList() {
