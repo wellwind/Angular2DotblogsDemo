@@ -3,3 +3,21 @@
 <app-add-form></app-add-form>
 
 <app-todo-items></app-todo-items>
+
+<hr/>
+
+<h2>Pipe Demo</h2>
+
+<h3>Date Pipe</h3>
+
+<div>{{ today | date }}</div>
+
+<div>{{ today | date:'y-MM-dd' }}</div>
+
+<div>{{ today | date:'shortDate' }}</div>
+
+<div>{{ today | date:'shortTime' }}</div>
+
+<h3>Json Pipe</h3>
+
+<pre>{{ bio | json }}</pre>
