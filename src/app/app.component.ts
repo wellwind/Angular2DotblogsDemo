@@ -8,7 +8,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app works!';
-
+  today = new Date();
   constructor(private todoListService: TodoListService) {
   }
 }
