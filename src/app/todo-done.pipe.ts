@@ -5,8 +5,13 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TodoDonePipe implements PipeTransform {
 
-  transform(value: any, args?: any): any {
-    return null;
+  transform(todoDone: boolean, displayNotDone: boolean): any {
+    if (todoDone) {
+      return '(已完成)';
+    } else if (displayNotDone) {
+      return '(未完成)';
+    }
+    return '';
   }
 
 }
