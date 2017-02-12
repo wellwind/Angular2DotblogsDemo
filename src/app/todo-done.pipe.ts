@@ -1,3 +1,4 @@
+import { TodoItem } from './shared/todo-item';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
@@ -5,8 +6,8 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class TodoDonePipe implements PipeTransform {
 
-  transform(todoDone: boolean, displayNotDone: boolean): any {
-    if (todoDone) {
+  transform(todoItem: TodoItem, displayNotDone: boolean): any {
+    if (todoItem.done) {
       return '(已完成)';
     } else if (displayNotDone) {
       return '(未完成)';
