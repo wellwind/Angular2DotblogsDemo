@@ -2,7 +2,8 @@ import { TodoItem } from './shared/todo-item';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'todoDone'
+  name: 'todoDone',
+  pure: false
 })
 export class TodoDonePipe implements PipeTransform {
 
