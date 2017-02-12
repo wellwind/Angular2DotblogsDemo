@@ -37,5 +37,7 @@ export class TodoListService {
 
   toogleItemStatus(item: TodoItem) {
     item.done = !item.done;
+    // 給予一個新的物件參考
+    this.todoItems = [...this.todoItems];
   }
 }
