@@ -1,16 +1,14 @@
-import { ElementRef, Directive, OnInit } from '@angular/core';
+import {Renderer, ElementRef,  Directive,  OnInit} from '@angular/core';
 
 @Directive({
   selector: '[appBsButton]'
 })
 export class BsButtonDirective implements OnInit {
 
-  constructor(private el: ElementRef) { }
+  constructor(private el: ElementRef, private renderer: Renderer) { }
 
   ngOnInit() {
-    console.log(this.el.nativeElement);
-    const button = (this.el.nativeElement as HTMLElement);
-    button.classList.add('btn');
-    button.classList.add('btn-primary');
+    this.renderer.setElementClass(this.el.nativeElement, 'btn', true);
+    this.renderer.setElementClass(this.el.nativeElement, 'btn-primary', true);
   }
 }
