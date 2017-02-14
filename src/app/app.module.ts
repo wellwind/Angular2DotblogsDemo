@@ -9,6 +9,7 @@ import { HeaderComponent } from './header/header.component';
 import { AddFormComponent } from './add-form/add-form.component';
 import { TodoItemsComponent } from './todo-items/todo-items.component';
 import { TodoDonePipe } from './todo-done.pipe';
+import { BsButtonDirective } from './bs-button.directive';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { TodoDonePipe } from './todo-done.pipe';
     HeaderComponent,
     AddFormComponent,
     TodoItemsComponent,
-    TodoDonePipe
+    TodoDonePipe,
+    BsButtonDirective
   ],
   imports: [
     BrowserModule,

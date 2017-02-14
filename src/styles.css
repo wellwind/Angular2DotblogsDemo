@@ -6,3 +6,7 @@ strong {
 .blue {
     color: blue;
 }
+
+body {
+  padding: 5px;
+}
