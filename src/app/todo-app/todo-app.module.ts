@@ -20,8 +20,7 @@ import { TodoAppComponent } from './todo-app/todo-app.component';
   ],
   providers: [TodoListService],
   exports: [
-    AddFormComponent,
-    TodoItemsComponent
+    TodoAppComponent
   ]
 })
 export class TodoAppModule { }
