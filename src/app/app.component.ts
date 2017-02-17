@@ -1,4 +1,3 @@
-import { TodoListService } from './todo-list.service';
 import { Component } from '@angular/core';
 
 @Component({
@@ -14,6 +13,6 @@ export class AppComponent {
     age: 30,
     sex: 'M'
   };
-  constructor(private todoListService: TodoListService) {
+  constructor() {
   }
 }
