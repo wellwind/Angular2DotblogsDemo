@@ -1,3 +1,4 @@
+import { TodoListService } from './todo-list.service';
 import { TodoDonePipe } from './todo-done.pipe';
 import { TodoItemsComponent } from './todo-items/todo-items.component';
 import { AddFormComponent } from './add-form/add-form.component';
@@ -14,6 +15,7 @@ import { TodoAppComponent } from './todo-app/todo-app.component';
     AddFormComponent,
     TodoItemsComponent,
     TodoDonePipe
-  ]
+  ],
+  providers: [TodoListService]
 })
 export class TodoAppModule { }

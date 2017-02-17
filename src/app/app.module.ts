@@ -1,4 +1,3 @@
-import { TodoListService } from './todo-list.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -19,7 +18,7 @@ import { BsButtonDirective } from './bs-button.directive';
     FormsModule,
     HttpModule
   ],
-  providers: [TodoListService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
