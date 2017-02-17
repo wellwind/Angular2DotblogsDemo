@@ -1,3 +1,6 @@
+import { TodoDonePipe } from './todo-done.pipe';
+import { TodoItemsComponent } from './todo-items/todo-items.component';
+import { AddFormComponent } from './add-form/add-form.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TodoAppComponent } from './todo-app/todo-app.component';
@@ -6,6 +9,11 @@ import { TodoAppComponent } from './todo-app/todo-app.component';
   imports: [
     CommonModule
   ],
-  declarations: [TodoAppComponent]
+  declarations: [
+    TodoAppComponent,
+    AddFormComponent,
+    TodoItemsComponent,
+    TodoDonePipe
+  ]
 })
 export class TodoAppModule { }
