@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { TodoListService } from './todo-list.service';
 import { TodoDonePipe } from './todo-done.pipe';
 import { TodoItemsComponent } from './todo-items/todo-items.component';
@@ -8,7 +9,8 @@ import { TodoAppComponent } from './todo-app/todo-app.component';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   declarations: [
     TodoAppComponent,
@@ -16,6 +18,10 @@ import { TodoAppComponent } from './todo-app/todo-app.component';
     TodoItemsComponent,
     TodoDonePipe
   ],
-  providers: [TodoListService]
+  providers: [TodoListService],
+  exports: [
+    AddFormComponent,
+    TodoItemsComponent
+  ]
 })
 export class TodoAppModule { }
