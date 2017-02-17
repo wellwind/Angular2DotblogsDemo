@@ -1,5 +1,5 @@
 import { TodoListService } from './../todo-list.service';
-import { TodoItem } from './../shared/todo-item';
+import { TodoItem } from '../../shared/todo-item';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

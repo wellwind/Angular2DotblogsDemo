@@ -1,4 +1,4 @@
-import { TodoItem } from './shared/todo-item';
+import { TodoItem } from '../shared/todo-item';
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
