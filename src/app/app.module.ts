@@ -1,3 +1,4 @@
+import { TodoAppModule } from './todo-app/todo-app.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
@@ -16,7 +17,8 @@ import { BsButtonDirective } from './bs-button.directive';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    TodoAppModule
   ],
   providers: [],
   bootstrap: [AppComponent]
